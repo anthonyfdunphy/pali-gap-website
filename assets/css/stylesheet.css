@@ -5,57 +5,33 @@
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-@keyframes bgScroll {
-  0% {
-    background-position : 0px 0px
-  }
-  100% {
-    background-position : 0px -800px
-  }
-}
-
-.home{
+section {
   display: flex;
+  align-items: center;
   justify-content: center;
+  font-size: 10rem;
+  width: 100%;
+  height: 100vh;
 }
 
-.scrollingCream {
-  /* display:block; */
-  width: 100vh;
-  height: 100vh;
-  background-image:url(/assets/media/creamcanvas.png);
-  background-repeat: repeat-y;
-  background-size: 100vh;
-  animation: bgScroll 20s linear infinite;
+section.you{
+  opacity: 0;
+  transform: translate(0, 20px); 
+  transition: all 5s;
 }
-.scrollingBlue {
-  display:block;
-  position: absolute;
-  width: 100vh;
-  height: 100vh;
-  background-image:url(/assets/media/bluecanvas.png);
-  background-repeat: repeat-y;
-  background-size: 100vh;
-  animation: bgScroll 20s linear infinite;
+  
+section.visible { 
+  opacity: 1;
+  transform: translate(0, 0); 
 }
 
-.scrollingBlue {
-  display:block;
-  position: absolute;
-  width: 100vh;
-  height: 100vh;
-  background-image:url(/assets/media/bluecanvas.png);
-  background-repeat: repeat-y;
-  background-size: 100vh;
-  animation: bgScroll 20s linear infinite;
-}
 
-.scrollingGreen{
+/* .scrollingGreen{
   display:block;
   position: absolute;
   width: 100vh;
@@ -64,18 +40,4 @@ body {
   background-repeat: repeat-y;
   background-size: 100vh;
   animation: bgScroll 20s linear infinite;
-}
-
-.scrollingRed{
-  display:block;
-  position: absolute;
-  width: 100vh;
-  height: 100vh;
-  margin-right: 200px;
-  background-image:url(/assets/media/redcanvas.png);
-  background-repeat: repeat-y;
-  background-size: 100vh;
-  background-position: 25% 75%;
-  overflow: hidden;
-  animation: bgScroll 20s linear infinite;
-}
+} */
