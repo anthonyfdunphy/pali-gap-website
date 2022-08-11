@@ -10,26 +10,25 @@ body {
   padding: 0;
 }
 
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10rem;
+.container{
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-section.you{
-  opacity: 0;
-  transform: translate(0, 20px); 
-  transition: all 5s;
+section{
+  width: 100%;
+}
+
+section:nth-child(even){
+  background-color: greenyellow;
+}
+
+section:nth-child(odd){
+  background-color: pink;
 }
   
-section.visible { 
-  opacity: 1;
-  transform: translate(0, 0); 
-}
-
 
 /* .scrollingGreen{
   display:block;
