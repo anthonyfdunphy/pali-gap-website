@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-  outline: 1px solid green !important;
+  /* outline: 1px solid green !important; */
 }
 
 html,
@@ -14,80 +14,27 @@ body {
 
 :root {
   --scrollPos: 50px; 
-  --scrollPosLeft: 70px;
-  --scrollPosRight: 100px;
+  --scrollPosOdd: 70px;
+  --scrollPosEven: 100px;
 }
 
-.container{
-  width: 100%;
-  height: 100%;
-}
-
-#home{
+.home-container{
   display: flex;
-  justify-content: center;
-}
-
-#about{
-  display: flex;
-  justify-content: center;
-}
-
-section{
-  display: flex;
-  width: 100%;
-}
-
-.home{
-  display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
   font-size: 9em;
+  z-index: 8;
 }
 
-#cream{
-  display:block;
-  width:100vw;
-  height:100vh;
-  background-image:url('/assets/media/creamcanvas.png');
-  background-size: 970px 950px;
-  background-position: -620px var(--scrollPos);
-  /* background-repeat: no-repeat; */
-  /* animation: bgScroll 20s linear infinite; */
-}
-
-#red{
-  display:block;
-  width:100vw;
-  height:100vh;
-  background-image:url('/assets/media/redcanvas.png');
-  background-size: 690px 1000px;
-  background-position: -100px var(--scrollPosLeft);
-  /* background-repeat: no-repeat; */
-  /* animation: bgScroll 20s linear infinite; */
-}
-
-#left{
-  display:block;
-  width:100vw;
-  height:100vh;
-  background-image:url('/assets/media/greencanvas.png');
-  background-size: 690px 1000px;
-  background-position: -100px var(--scrollPosLeft);
-  /* background-repeat: no-repeat; */
-  /* animation: bgScroll 20s linear infinite; */
-}
-
-#right{
-  display:block;
-  width:100vw;
-  height:100vh;
-  background-image:url('/assets/media/bluecanvas.png');
-  background-size: 700px 1000px;
-  background-position: -250px var(--scrollPosRight);
-  /* background-repeat: no-repeat; */
-  /* animation: bgScroll 20s linear infinite; */
+.about-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  overflow: hidden;
 }
 
 .contact{
@@ -95,6 +42,8 @@ section{
   grid-template-rows: 1fr 50px;
   height: 100%;
   width: 100%;
+  z-index: 10;
+  overflow: hidden;
 }
 
 #contact-footer{
@@ -109,6 +58,76 @@ footer{
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+}
+
+section{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+#cream-flip{
+  display:block;
+  width:100vw;
+  height:100vh;
+  background-image:url('/assets/media/Bliss\ Cream-min.png');
+  background-size: contain;
+  transform: scale(4) rotate(180deg);
+  background-repeat: repeat-y;
+  /* transform: rotate(90deg); */
+  background-position: -80px var(--scrollPos);
+  overflow: hidden;
+  z-index: -10;
+}
+
+#red{
+  display:block;
+  width:100vw;
+  height:100vh;
+  background-image:url('/assets/media/Bliss\ Red-min.png');
+  background-size: contain;
+  background-repeat: repeat-y;
+  transform: scale(3);
+  background-position: 50px var(--scrollPosEven);
+  /* background-repeat: no-repeat; */
+  /* animation: bgScroll 20s linear infinite; */
+}
+
+#green{
+  display:block;
+  width:100vw;
+  height:100vh;
+  background-image:url('/assets/media/Bliss\ Green-min.png');
+  background-size: contain;
+  transform: scale(3);
+  background-position: 20px var(--scrollPosOdd);
+  /* background-repeat: no-repeat; */
+  /* animation: bgScroll 20s linear infinite; */
+}
+
+#blue{
+  display:block;
+  width:100vw;
+  height:100vh;
+  background-image:url('/assets/media/Bliss\ Canvas\ Blue-min.png');
+  background-size: contain;
+  transform: scale(3);
+  background-position: -20px var(--scrollPosOdd);
+  /* background-repeat: no-repeat; */
+  /* animation: bgScroll 20s linear infinite; */
+}
+
+#cream{
+  display:block;
+  width:100vw;
+  height:100vh;
+  background-image:url('/assets/media/Bliss\ Cream-min.png');
+  background-size: contain;
+  background-repeat: repeat-y;
+  transform: scale(4);
+  background-position: -80px var(--scrollPosEven);
+  overflow: hidden;
+  z-index: -10;
 }
 
 @keyframes bgScroll {

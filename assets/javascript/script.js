@@ -10,7 +10,8 @@ window.addEventListener('scroll', (e) => {
     console.log(r);
 
     document.documentElement.style.setProperty('--scrollPos', scrolled + 100 + 'px');
-    document.documentElement.style.setProperty('--scrollPosRight', scrolled * -1 + 'px');
+    document.documentElement.style.setProperty('--scrollPosEven', scrolled * -1 + 'px');
+    document.documentElement.style.setProperty('--scrollPosOdd', scrolled + 'px');
 
 
     
