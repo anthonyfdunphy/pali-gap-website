@@ -1,15 +1,17 @@
-$(document).on("scroll", function () {
-    var pageTop = $(document).scrollTop()
-    var pageBottom = pageTop + $(window).height()
-    var tags = $("section")
+// const imgPos = document.getElementById('middle');
+var r = window.getComputedStyle(document.documentElement).getPropertyValue('--scrollPos');
+
+
+
+window.addEventListener('scroll', (e) => {
+    const scrolled = window.scrollY;
+    const maxScroll = window.innerHeight;
+
+    console.log(r);
+
+    document.documentElement.style.setProperty('--scrollPos', scrolled + 100 + 'px');
+    document.documentElement.style.setProperty('--scrollPosRight', scrolled * -1 + 'px');
+
+
     
-    for (var i = 0; i < tags.length; i++) {
-    var tag = tags[i]
-    
-    if ($(tag).position().top < pageBottom) {
-        $(tag).addClass("visible")
-    } else {  
-            $(tag).removeClass("visible")
-        }
-    }
-});
+})
