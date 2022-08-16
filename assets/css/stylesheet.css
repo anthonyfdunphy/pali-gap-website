@@ -35,16 +35,35 @@ body, container {
 
 .home-artist{
   display: flex;
+  align-items: center;
   justify-content: center;
+}
+
+#artist-header{
+  position: absolute;
+  font-size: 9em;
+  z-index: 5;
+}
+
+img{
+  position: absolute;
+  width: 25em;
 }
 
 .about-container{
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   z-index: -5;
   overflow: hidden;
+}
+
+#about{
+  position: absolute;
+  font-size: 10em;
+  z-index: 5;
 }
 
 .contact{
